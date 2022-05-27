@@ -10,12 +10,21 @@ header {
     position: relative;
 }
 
+/* Login Signup Btns */
+
+.login {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
 /* Header Image */
 
 .homeImage {
     background: linear-gradient(var(--color-primary), transparent);
     width: 32rem;
-    height: 12rem;
+    height: 20rem;
     position: absolute;
     left: calc(45% - 11rem);
     margin-top: 4rem;
