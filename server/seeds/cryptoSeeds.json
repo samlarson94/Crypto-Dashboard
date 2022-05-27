@@ -1,1 +1,9 @@
-[{ "timestamp": 1653675786, "target": "USD", "rates": { "BTC": 28347.586791 } }]
+
+[
+  {
+    "timestamp": 1653675786,
+    "target": "USD",
+    "rates": { "BTC": 28347.586791 }
+  }
+]
+
