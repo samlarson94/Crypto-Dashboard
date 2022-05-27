@@ -1,15 +1,17 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { Tech, Matchup } = require('../models');
-const { signToken } = require('../utils/auth');
+// const { AuthenticationError } = require('apollo-server-express');
+const { Crypto } = require('../models');
+// const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-   
+   crypto: async () => {
+     return Crypto.find({});
+   }
   },
 
-  Mutation: {
-
-  }
+  // Mutation: {
+  //   addCrypto: async 
+  // }
 
    
 };
