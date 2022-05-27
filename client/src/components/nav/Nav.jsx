@@ -1,6 +1,7 @@
 import React from 'react'
 import './nav.css'
 import {AiOutlineHome} from 'react-icons/ai'
+import {CgProfile} from 'react-icons/cg'
 import { useState } from 'react'
 
 const Nav = () => {
@@ -9,8 +10,8 @@ const Nav = () => {
     <nav>
       {/* ==== If "" is the active page, set class to active ==== */}
       <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
+      <a href='#profile' onClick={() => setActiveNav('#profile')} className={activeNav === '#profile' ? 'active' : ''}><CgProfile/></a>
       {/* <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>ICON HERE</a>
-      <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>ICON HERE</a>
       <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>ICON HERE</a>
       <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>ICON HERE</a> */}
     </nav>
