@@ -12,7 +12,8 @@ header {
 
 /* Header Image */
 
-.home__image {
+.homeImage {
+    background: linear-gradient(var(--color-primary), transparent);
     width: 32rem;
     height: 12rem;
     position: absolute;

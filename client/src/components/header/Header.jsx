@@ -8,8 +8,8 @@ const Header = () => {
         <h1>Welcome to the Crypto Tracker!</h1>
         <h5>Here you can track your favorite coins!</h5>
 
-        <div className='home__image'>
-            <img src={homeIMG} alt='home__image' />
+        <div className='homeImage'>
+            <img src={homeIMG} alt='homeimage' />
         </div>
     </header>
   )
