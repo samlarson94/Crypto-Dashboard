@@ -1,17 +1,18 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
+//to do: pull arr of objects from main api request
 
 const cryptoSchema = new Schema({
-  name: {
+  rates: { type: Object, required: true },
+  timestamp: {
+    type: Number,
+    required: true,
+  },
+  target: {
     type: String,
     required: true,
-    unique: true,
   },
-  price: {
-    type: Number,
-    required: true
-  }
 });
 
-const Crypto = model('Crypto', cryptoSchema);
+const Crypto = model("Crypto", cryptoSchema);
 
-module.exports = Tech;
+module.exports = Crypto;
