@@ -5,7 +5,7 @@ import login from './pages/login'
 import signup from './pages/signup'
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
-import link
+
 
 const App = () => {
   return (
