@@ -1,7 +1,7 @@
 import React from 'react'
-import './header.css'
-import homeIMG from '../../assets/home_image.png'
-import Login from './Login'
+import '../components/header/header.css'
+import homeIMG from '../assets/home_image.png'
+import Login from './login'
 
 const Home = () => {
   return (

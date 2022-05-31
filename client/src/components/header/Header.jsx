@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.css'
-import homeIMG from '../../assets/home_image.png'
+// import homeIMG from '../../assets/home_image.png'
 import Login from './Login'
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         <Login />
         
         <div className='homeImage'>
-            <img src={homeIMG} alt='homeimage' />
+            {/* <img src={homeIMG} alt='homeimage' /> */}
         </div>
     </div>
     </header>
