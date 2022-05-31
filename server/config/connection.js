@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // ADD MONGODB DATABASE NAME
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/crypto-dashboard', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/crypto-dashboard', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
