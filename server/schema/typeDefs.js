@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Crypto {
       _id: ID
-      name: String
+      target: String
   }
 
   type Query {
