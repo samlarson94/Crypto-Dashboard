@@ -1,0 +1,29 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.login {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;   
+}
+
+/* Header Image */
+
+.homeImage {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 32rem;
+    height: 12rem;
+    position: absolute;
+    left: calc(45% - 11rem);
+    margin-top: 4rem;
+}
