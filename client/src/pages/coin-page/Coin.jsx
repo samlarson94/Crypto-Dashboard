@@ -21,7 +21,7 @@ const Coin = () => {
         console.log(error)
     })
     
-}, [])
+}, )
 
 return (
     <div>
