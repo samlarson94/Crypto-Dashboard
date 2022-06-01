@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import React, {useState, useEffect} from "react"
 
 // Add CSS file
-import './CoinPage.css'
+import './coins.css'
 
 const Coin = () => {
     
