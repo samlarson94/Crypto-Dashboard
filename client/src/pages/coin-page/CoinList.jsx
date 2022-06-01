@@ -7,12 +7,11 @@ const CoinList = (props) => {
     return (
         <div className='container'>
             <div className="heading">
-                <p>#</p>
                 <p className='coin-name'>Coins</p>
                 <p>Price</p>
                 <p>24hr</p>
-                <p className='hide-mobile'>Volume</p>
-                <p className='hide-mobile'>Market Cap</p>
+                <p>Volume</p>
+                <p>Market Cap</p>
             </div>
 
             {props.coins.map(coins => {
