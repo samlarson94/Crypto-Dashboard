@@ -61,17 +61,6 @@
     color: var(--color-white);
 }
 
-/* img {
-    height: 50px;
-    margin-right: 8px;
-    width: auto;
-} */
-
-.img-symbol {
-    display: flex;
-    align-items: center;
-}
-
 
 
 @media screen and (max-width: 720px) {
