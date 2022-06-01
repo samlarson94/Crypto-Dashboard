@@ -1,3 +1,3 @@
 const Crypto = require("./Crypto");
-
-module.exports = { Crypto };
+const User = require("./User")
+module.exports = { Crypto, User };
