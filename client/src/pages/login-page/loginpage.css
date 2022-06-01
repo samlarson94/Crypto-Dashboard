@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 42%;
+    margin-top: 1.2rem;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 25%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+}
+
+.login__title {
+    text-align: center;
+    font-size: 1.6rem;
+    padding-top: 5%;
+}
