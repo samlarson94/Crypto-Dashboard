@@ -8,8 +8,9 @@ import Login from './pages/login-page/Loginpage'
 import Signup from './pages/signup/Signup'
 import Profile from './pages/profile/Profile'
 import CoinList from './pages/coin-page/CoinList';
-//import Footer from './components/footer';
-//import Error__Page from './pages/errorPage/errorPage'
+import Footer from './components/footer';
+import Coin from './pages/coin-page/Coin';
+import Error__Page from './pages/errorPage/errorPage'
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
               <Route path ='/' element={<Home />} />
               <Route path ='/coins' element={<CoinList coins={coins} />} />
               {/* <Route path='/coins/:coinId' element={<Coin />} /> */}
+              <Route path='/coin' element={<Coin />}>
+                <Route path=':coinId' element={<Coin />} />
+              </Route>
               <Route path='/login' element={<Login />} />
               <Route path='/signup' element={<Signup />} />
               <Route path ='/profile' element={<Profile/>}/>
