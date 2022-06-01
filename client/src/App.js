@@ -8,8 +8,8 @@ import Login from './pages/login-page/Loginpage'
 import Signup from './pages/signup/Signup'
 import Profile from './pages/profile/Profile'
 import CoinList from './pages/coin-page/CoinList';
-import Footer from './components/footer';
-import Error__Page from './pages/errorPage/errorPage'
+//import Footer from './components/footer';
+//import Error__Page from './pages/errorPage/errorPage'
 
 
 function App() {
