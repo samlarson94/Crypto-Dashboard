@@ -10,11 +10,15 @@ header {
     position: relative;
 }
 
-.login {
+/* .login  {
     margin-top: 2.5rem;
     display: flex;
-    gap: 1.2rem;
-    justify-content: center;   
+    gap: 1.5rem;
+} */
+
+.btn {
+    margin-top: 2.5rem;
+    margin-left: 1.2rem;
 }
 
 /* Header Image */
