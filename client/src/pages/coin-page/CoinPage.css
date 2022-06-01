@@ -1,0 +1,104 @@
+.coininfo-container .content-card {
+    max-width: 740px;
+    margin: 1rem auto;
+    padding: .7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    box-shadow: 0px 0px white;
+    border-radius: 5px;
+}
+
+.coin-rank {
+    margin: .5 0;
+}
+
+.rank-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: green;
+    padding: 4px;
+    margin: 3px;
+}
+
+.coin-logo {
+    margin-top: 5px;
+    width: 50px;
+    max-height: auto;
+}
+
+.coin-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.coin-info .coin-header {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.coin-info .coin-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-info p {
+    padding-right: 1rem;
+}
+
+table {
+    margin: .5rem 0;
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(63, 63, 63);
+}
+
+.coin-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+}
+
+.coin-stats .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: .6rem 0;
+    padding-bottom: .5rem;
+}
+
+.coin-stats .row p:first-child {
+    color: whitesmoke;
+
+}
+
+.coin-information h3 {
+    margin: 1rem 0;
+
+}
+
+.coin-information p {
+    margin: 1rem 0;
+    padding: .5rem 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .coininfo-container .content-card {
+        max-width: 100%;
+        margin: .5rem;
+        padding: 0 .5rem;
+    }
+
+    .coin-stats {
+        grid-template-columns: 1fr;
+    }
+}
