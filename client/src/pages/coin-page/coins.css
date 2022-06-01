@@ -60,11 +60,3 @@
     margin-left: 1.1rem;
     color: var(--color-white);
 }
-
-
-
-@media screen and (max-width: 720px) {
-    .hide-mobile {
-        display: none;
-    }
-}
