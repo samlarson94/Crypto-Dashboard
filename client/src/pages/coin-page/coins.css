@@ -181,4 +181,9 @@ th {
     .coin-stats {
         grid-template-columns: 1fr;
     }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
