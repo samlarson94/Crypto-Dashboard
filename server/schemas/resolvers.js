@@ -1,8 +1,7 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { Crypto } = require('../models');
-const { User } = require('../models');
-const { signToken } = require('../utils/auth');
-
+const { AuthenticationError } = require("apollo-server-express");
+const { Crypto } = require("../models");
+const { User } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -17,14 +16,10 @@ const resolvers = {
     },
   },
 
- // Mutation: {
-    //   addCrypto: async 
-    // }
-
   Mutation: {
-    addUser: async (parent, args ) => {
-      console.log(args)
-      const user = await User.create( args );
+    addUser: async (parent, args) => {
+      console.log(args);
+      const user = await User.create(args);
       const token = signToken(user);
       return { token, user };
     },
@@ -32,13 +27,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError("No user found with this email address");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError("Incorrect credentials");
       }
 
       const token = signToken(user);
@@ -46,7 +41,26 @@ const resolvers = {
       return { token, user };
     },
 
-  }
+    addFavorite: async (parent, { userId, favorite }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
+        {
+          $addToSet: { favorites: favorite },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+    removeFavorite: async (parent, { userId, favorite }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
+        { $pull: { favorites: favorite } },
+        { new: true }
+      );
+    },
+  },
 };
 
-  module.exports = resolvers;
+module.exports = resolvers;
