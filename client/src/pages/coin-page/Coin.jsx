@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useParams } from 'react-router-dom'
 import React, {useState, useEffect} from "react"
+import { Favoritebtn } from './favoritebtn/Favoritebtn'
 
 // Add CSS file
 import './coins.css'
@@ -33,6 +34,9 @@ return (
             <div className='content-card'>
                 <div className = 'coin-rank'>
                     <span className='rank-btn'>Rank # {coin.market_cap_rank}</span>
+                </div>
+                <div className="favorite__coin__btn">
+                    <Favoritebtn />
                 </div>
                 <div className="coin-info">
                     <div className="coin-header">
