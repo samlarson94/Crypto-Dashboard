@@ -11,7 +11,6 @@ import Profile from './pages/profile/Profile'
 import CoinList from './pages/coin-page/CoinList';
 import Footer from './components/footer';
 import Coin from './pages/coin-page/Coin';
-import Error__Page from './pages/errorPage/errorPage'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -68,7 +67,7 @@ function App() {
               {/* Error page route, must be last route */}
               <Route path='*' element={<Home />} />
             </Routes>
-            {/* <Footer /> */}
+            <Footer />
       </Router>
     </ApolloProvider>
   );

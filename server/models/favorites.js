@@ -19,3 +19,17 @@ const favoriteSchema = mongoose.Schema({
     type: String,
   },
 });
+
+
+// create model favorite crypto
+
+// save favorite crypto
+
+// each favorite will have a user reference
+
+// crypto reference in user table
+
+// Crypto array of objects
+
+// Resolver / typeDef for this
+
