@@ -69,9 +69,17 @@
     padding: .7rem 1rem;
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-image: linear-gradient(to bottom right, rgb(0, 173, 145), rgb(140, 81, 248));
     box-shadow: 0px 0px white;
     border-radius: 5px;
+}
+
+.title-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .coin-rank {
@@ -82,12 +90,13 @@
     border: 1px solid white;
     border-radius: 5px;
     background-color: green;
-    padding: 4px;
-    margin: 3px;
+    padding: 2px;
+    margin-top: 3px;
 }
 
 .coin-logo {
     margin-top: 5px;
+    margin-right: 8px;
     width: 50px;
     max-height: auto;
 }
@@ -100,6 +109,7 @@
 .coin-info .coin-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 1rem 0;
 }
 
@@ -148,12 +158,17 @@ th {
 
 .coin-information h3 {
     margin: 1rem 0;
+    text-align: center;
 
 }
 
 .coin-information p {
-    margin: 1rem 0;
+    margin: 1rem .25rem;
     padding: .5rem 1.5rem;
+}
+
+.coin-information a {
+    color: yellow;
 }
 
 @media screen and (max-width: 700px) {
