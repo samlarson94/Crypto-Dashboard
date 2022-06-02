@@ -1,6 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { Crypto } = require("../models");
-const { User } = require("../models");
+
+const { User, Favorite } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -38,25 +38,37 @@ const resolvers = {
       return { token, user };
     },
 
-    addFavorite: async (parent, { userId, favorite }) => {
-      return User.findOneAndUpdate(
-        { _id: userId },
-        {
-          $addToSet: { favorites: favorite },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
+    addFavorite: async (parent, { coinTitle, coinImg, coinLink }, context) => {
+      if (context.user) {
+        // const favorite = {
+        //   coinTitle,
+        //   coinImg,
+        //   coinLink,
+        // };
+        // });
+        // console.log(favorite);
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $addToSet: {
+              favorites: {
+                coinTitle,
+                coinImg,
+                coinLink,
+              },
+            },
+          }
+        );
+      }
+      throw new AuthenticationError("youre not logged in");
     },
-    removeFavorite: async (parent, { userId, favorite }) => {
-      return User.findOneAndUpdate(
-        { _id: userId },
-        { $pull: { favorites: favorite } },
-        { new: true }
-      );
-    },
+    // removeFavorite: async (parent, { userId, favorite }) => {
+    //   return User.findOneAndUpdate(
+    //     { _id: userId },
+    //     { $pull: { favorites: favorite } },
+    //     { new: true }
+    //   );
+    // },
   },
 };
 
