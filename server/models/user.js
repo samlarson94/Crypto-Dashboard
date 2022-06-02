@@ -21,8 +21,15 @@ const userSchema = new Schema({
   },
   favorites: [
     {
-      type: String,
-      trim: true,
+      coinImg: {
+        type: String,
+      },
+      coinLink: {
+        type: String,
+      },
+      coinTitle: {
+        type: String,
+      },
     },
   ],
 });
