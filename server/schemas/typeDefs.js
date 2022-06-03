@@ -23,7 +23,9 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(username: String!): User
-    favorites: [Favorite]
+    favorites(username: String): User
+    favorite(favoriteId: ID!): User
+    me: User
   }
 
   type Mutation {

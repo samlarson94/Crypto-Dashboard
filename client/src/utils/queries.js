@@ -11,12 +11,30 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_FAVORITES = gql`
-  query getFavorites {
-    username
+query Favorites($username: String) {
+  favorites(username: $username) {
+    _id
     favorites {
       coinTitle
       coinImg
       coinLink
+    }
+  }
+}
+`;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      favorites {
+        _id
+        coinTitle
+        coinImg
+        coinLink
+      }
     }
   }
 `;
