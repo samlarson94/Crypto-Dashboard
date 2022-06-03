@@ -1,0 +1,12 @@
+.footer__title {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: yellow;
+}
