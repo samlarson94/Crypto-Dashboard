@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import { useMutation } from "@apollo/client";
-import Auth from "../../../utils/auth";
-import { ADD_FAVORITE } from "../../../utils/mutations";
+import Auth from "../../utils/auth";
+import { ADD_FAVORITE } from "../../utils/mutations";
 
 export function Favoritebtn(props) {
   console.log(props);
