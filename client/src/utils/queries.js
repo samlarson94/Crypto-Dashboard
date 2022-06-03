@@ -12,8 +12,8 @@ export const QUERY_USER = gql`
 
 export const QUERY_FAVORITES = gql`
   query getFavorites {
+    username
     favorites {
-      _id
       coinTitle
       coinImg
       coinLink

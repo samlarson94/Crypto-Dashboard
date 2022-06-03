@@ -11,6 +11,9 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username });
     },
+    favorites: async (user, { Favorite }) => {
+      return User.find({ _id: [Favorite] });
+    }
   },
 
   Mutation: {
