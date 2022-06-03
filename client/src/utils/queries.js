@@ -9,3 +9,14 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_FAVORITES = gql`
+  query getFavorites {
+    favorites {
+      _id
+      coinTitle
+      coinImg
+      coinLink
+    }
+  }
+`;
