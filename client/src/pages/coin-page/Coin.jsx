@@ -8,7 +8,7 @@ import DOMPurify from "dompurify";
 import { Favoritebtn } from "./favoritebtn/Favoritebtn";
 
 // Add CSS file
-import "./coins.css";
+import "./coins.css"
 
 const Coin = () => {
   const params = useParams();
