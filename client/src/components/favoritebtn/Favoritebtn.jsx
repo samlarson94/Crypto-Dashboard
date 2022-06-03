@@ -19,7 +19,8 @@ export function Favoritebtn(props) {
           coinLink: props.coin.id,
         },
       });
-      console.log(data);
+      console.log(data.addFavorite.favorites);
+      // localStorage.setItem('favorites', data.addFavorite.favorites);
     } catch (error) {
       console.log(error);
     }
