@@ -10,6 +10,7 @@ import { Favoritebtn } from "../../components/favoritebtn/Favoritebtn";
 // Add CSS file
 import "./coins.css";
 
+
 const Coin = () => {
   const params = useParams();
   const [coin, setCoin] = useState({});
@@ -38,15 +39,18 @@ const Coin = () => {
           <div className="title-card">
             <h1>{coin.name}</h1>
             <span className="rank-btn">Rank # {coin.market_cap_rank}</span>
+            <div>
+            <Favoritebtn coin={coin} />
+          </div>
           </div>
         </div>
         <div className="content-card">
-          <div className="coin-rank">
+          {/* <div className="coin-rank">
             <span className="rank-btn">Rank # {coin.market_cap_rank}</span>
-          </div>
-          <div className="favorite__coin__btn">
+          </div> */}
+          {/* <div className="favorite__coin__btn">
             <Favoritebtn coin={coin} />
-          </div>
+          </div> */}
           <div className="coin-info">
             <div className="coin-header">
               {coin.image ? (
@@ -60,8 +64,8 @@ const Coin = () => {
                 <h1>
                   $
                   {coin.market_data.current_price.usd
-                    .toFixed(2)
-                    .toLocaleString()}
+                    .toLocaleString(undefined, {minimumFractionDigits: 2})
+                    }
                 </h1>
               ) : null}
             </div>
@@ -152,13 +156,13 @@ const Coin = () => {
               <div className="row">
                 <h4>24 Hour Low</h4>
                 {coin.market_data?.low_24h ? (
-                  <p>${coin.market_data.low_24h.usd.toLocaleString()}</p>
+                  <p>${coin.market_data.low_24h.usd.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
                 ) : null}
               </div>
               <div className="row">
                 <h4>24 Hour High</h4>
                 {coin.market_data?.high_24h ? (
-                  <p>${coin.market_data.high_24h.usd.toLocaleString()}</p>
+                  <p>${coin.market_data.high_24h.usd.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
                 ) : null}
               </div>
             </div>
@@ -166,13 +170,13 @@ const Coin = () => {
               <div className="row">
                 <h4>Market Cap</h4>
                 {coin.market_data?.market_cap ? (
-                  <p>${coin.market_data.market_cap.usd.toLocaleString()}</p>
+                  <p>${coin.market_data.market_cap.usd.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
                 ) : null}
               </div>
               <div className="row">
                 <h4>Circulating Supply</h4>
                 {coin.market_data ? (
-                  <p>${coin.market_data.circulating_supply.toLocaleString()}</p>
+                  <p>${coin.market_data.circulating_supply.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
                 ) : null}
               </div>
             </div>
