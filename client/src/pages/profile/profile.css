@@ -1,7 +1,7 @@
 .profile__container {
     text-align: center;
     height: 100%;
-    position: relative;
+    position: flex;
 }
 
 .profile__container h1 {
@@ -11,4 +11,36 @@
 .profile__container h5 {
     font-size: 1.6rem;
     margin-top: 1rem;
+}
+
+.favorites_container {
+    max-width: 740px;
+    margin: 1rem auto;
+    padding: .7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, rgb(0, 173, 145), rgb(140, 81, 248));
+    box-shadow: 5px 5px white;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+/* .profile__favorites {
+    
+} */
+
+@media screen and (max-width: 700px) {
+    .favorites_container {
+        max-width: 100%;
+        margin: .5rem;
+        padding: 0 .5rem;
+    }
+
+    .coin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
