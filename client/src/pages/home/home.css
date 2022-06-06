@@ -34,6 +34,10 @@ header {
     margin-top: 4rem;
 }
 
+.homeImage img {
+    height: 95vh;
+}
+
 footer {
     margin-top: 10rem;
     text-align: center;
