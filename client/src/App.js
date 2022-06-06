@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -41,33 +41,33 @@ function App() {
   // Coingecko API for top 10 cryptocurrencies ranked by market cap
   const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
 
-    useEffect(() => {
+  useEffect(() => {
     axios.get(url).then((response) => {
       setCoins(response.data)
       console.log(response.data[0])
     }).catch((error) => {
       console.log(error)
     })
-    }, [])
+  }, [])
 
   return (
 
     <ApolloProvider client={client}>
       <Router>
-            <Routes>
-              <Route path ='/' element={<Home />} />
-              <Route path ='/coins' element={<CoinList coins={coins} />} />
-              {/* <Route path='/coins/:coinId' element={<Coin />} /> */}
-              <Route path='/coin' element={<Coin />}>
-                <Route path=':coinId' element={<Coin />} />
-              </Route>
-              <Route path='/login' element={<Login />} />
-              <Route path='/signup' element={<Signup />} />
-              <Route path ='/profile' element={<Profile/>}/>
-              {/* Error page route, must be last route */}
-              <Route path='*' element={<Home />} />
-            </Routes>
-            <Footer />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/coins' element={<CoinList coins={coins} />} />
+          {/* <Route path='/coins/:coinId' element={<Coin />} /> */}
+          <Route path='/coin' element={<Coin />}>
+            <Route path=':coinId' element={<Coin />} />
+          </Route>
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/profile' element={<Profile />} />
+          {/* Error page route, must be last route */}
+          <Route path='*' element={<Home />} />
+        </Routes>
+        <Footer />
       </Router>
     </ApolloProvider>
   );

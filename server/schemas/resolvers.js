@@ -65,6 +65,7 @@ const resolvers = {
                 coinTitle,
                 coinImg,
                 coinLink,
+                coinPrice,
               },
             },
           }

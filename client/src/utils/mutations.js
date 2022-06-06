@@ -30,11 +30,12 @@ export const ADD_FAVORITE = gql`
     $coinImg: String
     $coinLink: String
   ) {
-    addFavorite(coinTitle: $coinTitle, coinImg: $coinImg, coinLink: $coinLink) {
+    addFavorite(coinTitle: $coinTitle, coinImg: $coinImg, coinLink: $coinLink, coinPrice: $coinPrice,) {
       favorites {
         coinTitle
         coinImg
         coinLink
+        coinPrice
       }
     }
   }
