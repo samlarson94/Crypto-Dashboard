@@ -5,6 +5,8 @@ import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { ADD_FAVORITE } from "../../utils/mutations";
 
+import "../favoritebtn/favoritebtn.css";
+
 export function Favoritebtn(props) {
   console.log(props);
   const [addFavorite, { error }] = useMutation(ADD_FAVORITE);
@@ -25,5 +27,5 @@ export function Favoritebtn(props) {
       console.log(error);
     }
   };
-  return <button onClick={handleClick}>Add To Favorites</button>;
+  return <button className="favorite__coin__btn" onClick={handleClick}>Add To Favorites</button>;
 }
