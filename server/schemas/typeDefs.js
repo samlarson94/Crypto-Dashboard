@@ -32,7 +32,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addFavorite(coinTitle: String!, coinImg: String, coinLink: String, coinPrice: String): User
+    addFavorite(coinTitle: String!, coinImg: String, coinLink: String): User
   }
 `;
 
