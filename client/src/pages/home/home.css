@@ -7,7 +7,7 @@ header {
 .header__container {
     text-align: center;
     height: 100%;
-    position: relative;
+    position: center;
 }
 
 /* .login  {
@@ -19,15 +19,50 @@ header {
 .btn {
     margin-top: 2.5rem;
     margin-left: 1.2rem;
+    position: center;
 }
 
 /* Header Image */
 
 .homeImage {
     background: linear-gradient(var(--color-primary), transparent);
-    width: 32rem;
-    height: 12rem;
-    position: absolute;
-    left: calc(45% - 11rem);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    /* left: calc(45% - 11rem); */
     margin-top: 4rem;
+}
+
+footer {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: yellow;
+}
+
+@media screen and (max-width: 700px) {
+    .homeImage {
+        max-width: 100%;
+        height: auto;
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 .5rem;
+    }
+
+    .coin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }

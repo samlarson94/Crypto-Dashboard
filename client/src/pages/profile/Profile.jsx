@@ -15,13 +15,14 @@ const Profile = () => {
   const favoritesData = data?.favorites || [];
   console.log(favoritesData.favorites)
   return (
-    <header>
+    <main>
     <Nav />
     <div className='container profile__container'>
-    <h1>Your Crypto Tracker!</h1>
+    <h1>React-Fi Crypto Tracker</h1>
         <h5>Here are your favorite coins!</h5>
     </div>
    
+   <div className="favorites_container">
     <div className='profile__favorites'>
     {loading ? (
             <div>Loading...</div>
@@ -31,7 +32,8 @@ const Profile = () => {
             />
           )}
     </div>
-    </header>
+    </div>
+    </main>
   )
 }
 
