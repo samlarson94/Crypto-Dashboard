@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import DOMPurify from "dompurify";
 import { Favoritebtn } from "../../components/favoritebtn/Favoritebtn";
+import Nav from '../../components/nav/Nav'
 
 // Add CSS file
 import "./coins.css";

@@ -7,8 +7,8 @@ import { QUERY_FAVORITES } from '../../utils/queries';
 
 
 const Profile = () => {
-  const {data, loading} = useQuery(QUERY_FAVORITES, {
-    variables:{
+  const { data, loading } = useQuery(QUERY_FAVORITES, {
+    variables: {
       username: localStorage.getItem("username")
     }
   });
@@ -16,21 +16,20 @@ const Profile = () => {
   console.log(favoritesData.favorites)
   return (
     <header>
-    <Nav />
-    <div className='container profile__container'>
-    <h1>Your Crypto Tracker!</h1>
+      <Nav />
+      <div className='container profile__container'>
+        <h1>Your Crypto Tracker!</h1>
         <h5>Here are your favorite coins!</h5>
-    </div>
-   
-    <div className='profile__favorites'>
-    {loading ? (
+        <div className='profile__favorites'>
+          {loading ? (
             <div>Loading...</div>
           ) : (
             <FavoriteList
               favorites={favoritesData.favorites}
             />
           )}
-    </div>
+        </div>
+      </div>
     </header>
   )
 }

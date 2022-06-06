@@ -18,6 +18,7 @@ query Favorites($username: String) {
       coinTitle
       coinImg
       coinLink
+      coinPrice
     }
   }
 }
@@ -34,6 +35,7 @@ export const QUERY_ME = gql`
         coinTitle
         coinImg
         coinLink
+        coinPrice
       }
     }
   }

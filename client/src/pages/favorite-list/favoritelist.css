@@ -1,0 +1,14 @@
+.favorites__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
+.coin__img {
+    width: 20%;
+    margin-top: 2rem;
+}
+
+.coin__title {
+    font-size: 2.4rem;
+}

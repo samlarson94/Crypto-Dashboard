@@ -1,5 +1,6 @@
 import React from "react";
 import "./coins.css"
+import Nav from '../../components/nav/Nav'
 import { GiRank3 } from 'react-icons/gi'
 
 const CoinData = (props) => {
