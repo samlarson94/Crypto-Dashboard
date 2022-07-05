@@ -11,9 +11,10 @@ const FavoriteList = ({ favorites }) => {
       <div className="favorites__container">
         {favorites &&
           favorites.map((favorite, i) => (
-            <div key={i}>
+            <div className="favorites__list" key={i}>
                 <img src={favorite.coinImg} alt='coinImg' className='coin__img'></img>
                 <p className='coin__title'>{favorite.coinTitle}</p>
+                <p className='coin__price'>{favorite.current_price}</p>
             </div>
           ))}
       </div>
